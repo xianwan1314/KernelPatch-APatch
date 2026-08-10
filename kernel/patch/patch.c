@@ -52,6 +52,7 @@ int resolve_pt_regs();
 int supercall_install();
 void module_init();
 void syscall_init();
+int init_module_filter_init();
 int kstorage_init();
 int su_compat_init();
 
@@ -151,6 +152,7 @@ int patch()
     hotpatch_symbol_init();
     module_init();
     syscall_init();
+    init_module_filter_init();
 
     hook_err_t rc = 0;
 
